@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
         title: const Text('Home Screen'),
         actions: [
           IconButton(
-            onPressed: (() => context.go('/settings')),
+            onPressed: (() => context.push('/settings')),
             icon: const Icon(Icons.settings),
           )
         ],

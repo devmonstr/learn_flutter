@@ -76,7 +76,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               Theme.of(context).colorScheme.onPrimary,
                           backgroundColor:
                               Theme.of(context).colorScheme.primary),
-                      onPressed: () => context.go('/details'),
+                      onPressed: () => context.go('/home'),
                       child: Text('Login')),
                 )
               ],

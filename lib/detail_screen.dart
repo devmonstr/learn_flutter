@@ -18,7 +18,7 @@ class DetailsScreen extends StatelessWidget {
           style: ElevatedButton.styleFrom(
               foregroundColor: Theme.of(context).colorScheme.onPrimary,
               backgroundColor: Theme.of(context).colorScheme.primary),
-          onPressed: () => context.go('/'),
+          onPressed: () => context.go('/home'),
           child: const Text('Go back to the Home screen'),
         ),
       ),
