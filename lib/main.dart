@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:learn_flutter/detail_screen.dart';
-import 'package:learn_flutter/home_screen.dart';
+import 'package:learn_flutter/dashboard_screen.dart';
 import 'package:learn_flutter/login_screen.dart';
 import 'package:learn_flutter/register_screen.dart';
 import 'package:learn_flutter/settings_screen.dart';
@@ -38,7 +38,7 @@ final GoRouter _router = GoRouter(
         GoRoute(
           path: 'home',
           builder: (BuildContext context, GoRouterState state) {
-            return const HomeScreen();
+            return const DashboardScreen();
           },
         ),
       ],
