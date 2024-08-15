@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:learn_flutter/detail_screen.dart';
 import 'package:learn_flutter/home_screen.dart';
+import 'package:learn_flutter/login_screen.dart';
+import 'package:learn_flutter/register_screen.dart';
 import 'package:learn_flutter/settings_screen.dart';
 
 void main() => runApp(const MyApp());
@@ -12,9 +14,15 @@ final GoRouter _router = GoRouter(
     GoRoute(
       path: '/',
       builder: (BuildContext context, GoRouterState state) {
-        return const HomeScreen();
+        return const LoginScreen();
       },
       routes: <RouteBase>[
+        GoRoute(
+          path: 'register',
+          builder: (BuildContext context, GoRouterState state) {
+            return const RegisterScreen();
+          },
+        ),
         GoRoute(
           path: 'details',
           builder: (BuildContext context, GoRouterState state) {
@@ -43,7 +51,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routerConfig: _router,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
       darkTheme: ThemeData.dark().copyWith(
