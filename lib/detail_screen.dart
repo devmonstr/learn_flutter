@@ -14,12 +14,16 @@ class DetailsScreen extends StatelessWidget {
         title: const Text('Details Screen'),
       ),
       body: Center(
-        child: ElevatedButton(
-          style: ElevatedButton.styleFrom(
-              foregroundColor: Theme.of(context).colorScheme.onPrimary,
-              backgroundColor: Theme.of(context).colorScheme.primary),
-          onPressed: () => context.go('/home'),
-          child: const Text('Go back to the Home screen'),
+        child: SizedBox(
+          height: 40,
+          width: 300,
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+                foregroundColor: Theme.of(context).colorScheme.onPrimary,
+                backgroundColor: Theme.of(context).colorScheme.primary),
+            onPressed: () => context.go('/home'),
+            child: const Text('Go back to the Home screen'),
+          ),
         ),
       ),
     );
