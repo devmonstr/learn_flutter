@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:learn_flutter/detail_screen.dart';
-import 'package:learn_flutter/dashboard_screen.dart';
-import 'package:learn_flutter/login_screen.dart';
-import 'package:learn_flutter/register_screen.dart';
-import 'package:learn_flutter/settings_screen.dart';
+import 'package:learn_flutter/Screen/detail_screen.dart';
+import 'package:learn_flutter/Screen/dashboard_screen.dart';
+import 'package:learn_flutter/Screen/login_screen.dart';
+import 'package:learn_flutter/Screen/register_screen.dart';
+import 'package:learn_flutter/Screen/settings_screen.dart';
 
 void main() => runApp(const MyApp());
 
