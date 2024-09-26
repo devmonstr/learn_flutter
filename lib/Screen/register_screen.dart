@@ -18,75 +18,71 @@ class _RegisterScreenState extends State<RegisterScreen> {
       ),
       body: SingleChildScrollView(
         child: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: SizedBox(
-              width: 500,
-              height: 500,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(
-                    Icons.app_registration_rounded,
-                    size: 150,
-                    color: Theme.of(context).colorScheme.primary,
+          child: Container(
+            padding: EdgeInsets.all(24),
+            constraints: BoxConstraints(maxWidth: 500),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  Icons.app_registration_rounded,
+                  size: 150,
+                  color: Theme.of(context).colorScheme.primary,
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                TextFormField(
+                  decoration: InputDecoration(
+                    labelText: 'Name',
+                    //border: OutlineInputBorder(),
                   ),
-                  SizedBox(
-                    height: 10,
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                TextFormField(
+                  decoration: InputDecoration(
+                    labelText: 'Email',
+                    //border: OutlineInputBorder(),
                   ),
-                  TextFormField(
-                    decoration: InputDecoration(
-                      labelText: 'Name',
-                      //border: OutlineInputBorder(),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                TextFormField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    labelText: 'Password',
+                    //border: OutlineInputBorder(),
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                TextFormField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    labelText: 'Confirm Password',
+                    //border: OutlineInputBorder(),
+                  ),
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                SizedBox(
+                  height: 40,
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      foregroundColor: Theme.of(context).colorScheme.onPrimary,
+                      backgroundColor: Theme.of(context).colorScheme.primary,
                     ),
+                    onPressed: () => context.go('/'),
+                    child: Text('Register'),
                   ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  TextFormField(
-                    decoration: InputDecoration(
-                      labelText: 'Email',
-                      //border: OutlineInputBorder(),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  TextFormField(
-                    obscureText: true,
-                    decoration: InputDecoration(
-                      labelText: 'Password',
-                      //border: OutlineInputBorder(),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  TextFormField(
-                    obscureText: true,
-                    decoration: InputDecoration(
-                      labelText: 'Confirm Password',
-                      //border: OutlineInputBorder(),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  SizedBox(
-                    height: 40,
-                    width: double.infinity,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        foregroundColor:
-                            Theme.of(context).colorScheme.onPrimary,
-                        backgroundColor: Theme.of(context).colorScheme.primary,
-                      ),
-                      onPressed: () => context.go('/'),
-                      child: Text('Register'),
-                    ),
-                  )
-                ],
-              ),
+                )
+              ],
             ),
           ),
         ),

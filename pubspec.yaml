@@ -39,6 +39,7 @@ dependencies:
   settings_ui: ^2.0.2
   shared_preferences: ^2.3.1
   device_preview: ^1.2.0
+  flutter_bloc: ^8.1.6
 
 dev_dependencies:
   flutter_test:
